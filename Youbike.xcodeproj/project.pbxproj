@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0401838A22CB2D120090AA2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401838922CB2D120090AA2E /* AppDelegate.swift */; };
+		0401839122CB2D140090AA2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0401839022CB2D140090AA2E /* Assets.xcassets */; };
+		0401839422CB2D140090AA2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401839222CB2D140090AA2E /* LaunchScreen.storyboard */; };
+		0401839F22CB3CBE0090AA2E /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401839E22CB3CBE0090AA2E /* Station.swift */; };
+		040183A622CB497B0090AA2E /* StationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183A522CB497B0090AA2E /* StationService.swift */; };
+		040183AB22CB659C0090AA2E /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183AA22CB659C0090AA2E /* TabBarItemType.swift */; };
+		040183AD22CB65CD0090AA2E /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183AC22CB65CD0090AA2E /* TabBarItem.swift */; };
+		040183AF22CB671D0090AA2E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183AE22CB671D0090AA2E /* TabBarController.swift */; };
+		040183B222CB746C0090AA2E /* StationListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183B022CB746C0090AA2E /* StationListVC.swift */; };
+		040183B322CB746C0090AA2E /* StationListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183B122CB746C0090AA2E /* StationListVC.xib */; };
+		040183B622CB75570090AA2E /* StationMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183B422CB75570090AA2E /* StationMapVC.swift */; };
+		040183B722CB75570090AA2E /* StationMapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183B522CB75570090AA2E /* StationMapVC.xib */; };
+		040183BA22CB75700090AA2E /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183B822CB75700090AA2E /* FavoriteVC.swift */; };
+		040183BB22CB75700090AA2E /* FavoriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183B922CB75700090AA2E /* FavoriteVC.xib */; };
+		040183BE22CB77B30090AA2E /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183BC22CB77B30090AA2E /* StationCell.swift */; };
+		040183BF22CB77B30090AA2E /* StationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183BD22CB77B30090AA2E /* StationCell.xib */; };
+		040183C222CB9F670090AA2E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183C122CB9F670090AA2E /* UITableView+Extension.swift */; };
+		040183CE22CC093F0090AA2E /* CustomPinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183CD22CC093F0090AA2E /* CustomPinAnnotation.swift */; };
+		040183D022CC095A0090AA2E /* CustomPinAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183CF22CC095A0090AA2E /* CustomPinAnnotation.xib */; };
+		040183D222CC1BE30090AA2E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183D122CC1BE30090AA2E /* Date+Extension.swift */; };
+		040183D422CC1C2B0090AA2E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183D322CC1C2B0090AA2E /* String+Extension.swift */; };
+		040183D622CC3ABF0090AA2E /* MyCustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183D522CC3ABF0090AA2E /* MyCustomPointAnnotation.swift */; };
+		040183DA22CC49610090AA2E /* CustomCallOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183D922CC49610090AA2E /* CustomCallOutView.swift */; };
+		040183DC22CC49760090AA2E /* CustomCallOutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040183DB22CC49760090AA2E /* CustomCallOutView.xib */; };
+		040183DE22CC4E420090AA2E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183DD22CC4E420090AA2E /* UIView+Extension.swift */; };
+		040183E122CC5C6E0090AA2E /* DistrictData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040183E022CC5C6D0090AA2E /* DistrictData.swift */; };
+		0425DC2B22CCAA6A005E04AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425DC2A22CCAA6A005E04AD /* Constants.swift */; };
+		0425DC2D22CCAD2F005E04AD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425DC2C22CCAD2F005E04AD /* UIViewController+Extension.swift */; };
+		0425DC2F22CCCF1D005E04AD /* StationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425DC2E22CCCF1D005E04AD /* StationViewModel.swift */; };
+		2CC976C02865598300390808 /* StationListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC976BF2865598300390808 /* StationListVM.swift */; };
+		B42FD3E2DC307977610FEE1D /* Pods_Youbike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4E9B44AB58B0C3BF3BDE62 /* Pods_Youbike.framework */; };
+		CE18A7BD24DBFC9900A476B4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18A7BC24DBFC9900A476B4 /* UIColor+Extension.swift */; };
+		CED1A6C024DCFA9000451E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED1A6BF24DCFA9000451E73 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0401838622CB2D120090AA2E /* Youbike找尋.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youbike找尋.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0401838922CB2D120090AA2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0401839022CB2D140090AA2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0401839322CB2D140090AA2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0401839522CB2D140090AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0401839E22CB3CBE0090AA2E /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		040183A522CB497B0090AA2E /* StationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationService.swift; sourceTree = "<group>"; };
+		040183AA22CB659C0090AA2E /* TabBarItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
+		040183AC22CB65CD0090AA2E /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		040183AE22CB671D0090AA2E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		040183B022CB746C0090AA2E /* StationListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListVC.swift; sourceTree = "<group>"; };
+		040183B122CB746C0090AA2E /* StationListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationListVC.xib; sourceTree = "<group>"; };
+		040183B422CB75570090AA2E /* StationMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapVC.swift; sourceTree = "<group>"; };
+		040183B522CB75570090AA2E /* StationMapVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationMapVC.xib; sourceTree = "<group>"; };
+		040183B822CB75700090AA2E /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
+		040183B922CB75700090AA2E /* FavoriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteVC.xib; sourceTree = "<group>"; };
+		040183BC22CB77B30090AA2E /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		040183BD22CB77B30090AA2E /* StationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StationCell.xib; sourceTree = "<group>"; };
+		040183C122CB9F670090AA2E /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		040183CD22CC093F0090AA2E /* CustomPinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPinAnnotation.swift; sourceTree = "<group>"; };
+		040183CF22CC095A0090AA2E /* CustomPinAnnotation.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPinAnnotation.xib; sourceTree = "<group>"; };
+		040183D122CC1BE30090AA2E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		040183D322CC1C2B0090AA2E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		040183D522CC3ABF0090AA2E /* MyCustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomPointAnnotation.swift; sourceTree = "<group>"; };
+		040183D922CC49610090AA2E /* CustomCallOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCallOutView.swift; sourceTree = "<group>"; };
+		040183DB22CC49760090AA2E /* CustomCallOutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCallOutView.xib; sourceTree = "<group>"; };
+		040183DD22CC4E420090AA2E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		040183E022CC5C6D0090AA2E /* DistrictData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictData.swift; sourceTree = "<group>"; };
+		0425DC2A22CCAA6A005E04AD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0425DC2C22CCAD2F005E04AD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0425DC2E22CCCF1D005E04AD /* StationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewModel.swift; sourceTree = "<group>"; };
+		0483C437D8A2EC8EF973F881 /* Pods-Youbike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.debug.xcconfig"; sourceTree = "<group>"; };
+		2A5860B72CED6DC381D14733 /* Pods-YoubikeDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoubikeDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoubikeDemo/Pods-YoubikeDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2CC976BF2865598300390808 /* StationListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListVM.swift; sourceTree = "<group>"; };
+		55F683E0F1B30A662B4DC220 /* Pods-Youbike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youbike.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youbike/Pods-Youbike.release.xcconfig"; sourceTree = "<group>"; };
+		6B4A43E8A701003627057E94 /* Pods-YoubikeDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoubikeDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoubikeDemo/Pods-YoubikeDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BB4E9B44AB58B0C3BF3BDE62 /* Pods_Youbike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Youbike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE18A7BC24DBFC9900A476B4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CED1A6BF24DCFA9000451E73 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0401838322CB2D120090AA2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42FD3E2DC307977610FEE1D /* Pods_Youbike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0401837D22CB2D120090AA2E = {
+			isa = PBXGroup;
+			children = (
+				0401838822CB2D120090AA2E /* Youbike */,
+				0401838722CB2D120090AA2E /* Products */,
+				71C692793659D4212169B722 /* Pods */,
+				C71367FFBBD88AF107BB81D0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0401838722CB2D120090AA2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0401838622CB2D120090AA2E /* Youbike找尋.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0401838822CB2D120090AA2E /* Youbike */ = {
+			isa = PBXGroup;
+			children = (
+				040183DF22CC5C540090AA2E /* Constants */,
+				040183C022CB9F4A0090AA2E /* Extensions */,
+				040183A422CB47870090AA2E /* Service */,
+				040183A922CB657B0090AA2E /* Tab Bar */,
+				0425DC2022CC9C5A005E04AD /* Models */,
+				0425DC1F22CC9C34005E04AD /* ViewModels */,
+				0425DC2122CC9C92005E04AD /* Views */,
+				0401839B22CB32330090AA2E /* Supporting Files */,
+			);
+			path = Youbike;
+			sourceTree = "<group>";
+		};
+		0401839B22CB32330090AA2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0401838922CB2D120090AA2E /* AppDelegate.swift */,
+				0401839022CB2D140090AA2E /* Assets.xcassets */,
+				0401839222CB2D140090AA2E /* LaunchScreen.storyboard */,
+				0401839522CB2D140090AA2E /* Info.plist */,
+				CED1A6BF24DCFA9000451E73 /* Main.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		040183A422CB47870090AA2E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				040183A522CB497B0090AA2E /* StationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		040183A922CB657B0090AA2E /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				040183AA22CB659C0090AA2E /* TabBarItemType.swift */,
+				040183AC22CB65CD0090AA2E /* TabBarItem.swift */,
+				040183AE22CB671D0090AA2E /* TabBarController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		040183C022CB9F4A0090AA2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				040183C122CB9F670090AA2E /* UITableView+Extension.swift */,
+				040183D122CC1BE30090AA2E /* Date+Extension.swift */,
+				040183D322CC1C2B0090AA2E /* String+Extension.swift */,
+				040183DD22CC4E420090AA2E /* UIView+Extension.swift */,
+				0425DC2C22CCAD2F005E04AD /* UIViewController+Extension.swift */,
+				CE18A7BC24DBFC9900A476B4 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		040183DF22CC5C540090AA2E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				040183E022CC5C6D0090AA2E /* DistrictData.swift */,
+				0425DC2A22CCAA6A005E04AD /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		0425DC1F22CC9C34005E04AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0425DC2E22CCCF1D005E04AD /* StationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0425DC2022CC9C5A005E04AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0401839E22CB3CBE0090AA2E /* Station.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0425DC2122CC9C92005E04AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0425DC2722CC9DBF005E04AD /* FavoriteStation */,
+				0425DC2622CC9D9B005E04AD /* StationMap */,
+				0425DC2522CC9D72005E04AD /* StationList */,
+				0425DC2422CC9D27005E04AD /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0425DC2422CC9D27005E04AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				040183BC22CB77B30090AA2E /* StationCell.swift */,
+				040183BD22CB77B30090AA2E /* StationCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0425DC2522CC9D72005E04AD /* StationList */ = {
+			isa = PBXGroup;
+			children = (
+				040183B022CB746C0090AA2E /* StationListVC.swift */,
+				040183B122CB746C0090AA2E /* StationListVC.xib */,
+				2CC976BF2865598300390808 /* StationListVM.swift */,
+			);
+			path = StationList;
+			sourceTree = "<group>";
+		};
+		0425DC2622CC9D9B005E04AD /* StationMap */ = {
+			isa = PBXGroup;
+			children = (
+				040183B422CB75570090AA2E /* StationMapVC.swift */,
+				040183B522CB75570090AA2E /* StationMapVC.xib */,
+				040183D922CC49610090AA2E /* CustomCallOutView.swift */,
+				040183DB22CC49760090AA2E /* CustomCallOutView.xib */,
+				040183CD22CC093F0090AA2E /* CustomPinAnnotation.swift */,
+				040183CF22CC095A0090AA2E /* CustomPinAnnotation.xib */,
+				040183D522CC3ABF0090AA2E /* MyCustomPointAnnotation.swift */,
+			);
+			path = StationMap;
+			sourceTree = "<group>";
+		};
+		0425DC2722CC9DBF005E04AD /* FavoriteStation */ = {
+			isa = PBXGroup;
+			children = (
+				040183B822CB75700090AA2E /* FavoriteVC.swift */,
+				040183B922CB75700090AA2E /* FavoriteVC.xib */,
+			);
+			path = FavoriteStation;
+			sourceTree = "<group>";
+		};
+		71C692793659D4212169B722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A5860B72CED6DC381D14733 /* Pods-YoubikeDemo.debug.xcconfig */,
+				6B4A43E8A701003627057E94 /* Pods-YoubikeDemo.release.xcconfig */,
+				0483C437D8A2EC8EF973F881 /* Pods-Youbike.debug.xcconfig */,
+				55F683E0F1B30A662B4DC220 /* Pods-Youbike.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C71367FFBBD88AF107BB81D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB4E9B44AB58B0C3BF3BDE62 /* Pods_Youbike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0401838522CB2D120090AA2E /* Youbike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0401839822CB2D140090AA2E /* Build configuration list for PBXNativeTarget "Youbike" */;
+			buildPhases = (
+				CF8CA12293C32D1A3737E6B3 /* [CP] Check Pods Manifest.lock */,
+				0401838222CB2D120090AA2E /* Sources */,
+				0401838322CB2D120090AA2E /* Frameworks */,
+				0401838422CB2D120090AA2E /* Resources */,
+				9E6962FCBE325150AD0E330E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Youbike;
+			productName = YoubikeDemo;
+			productReference = 0401838622CB2D120090AA2E /* Youbike找尋.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0401837E22CB2D120090AA2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Jack;
+				TargetAttributes = {
+					0401838522CB2D120090AA2E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 0401838122CB2D120090AA2E /* Build configuration list for PBXProject "Youbike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0401837D22CB2D120090AA2E;
+			productRefGroup = 0401838722CB2D120090AA2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0401838522CB2D120090AA2E /* Youbike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0401838422CB2D120090AA2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040183D022CC095A0090AA2E /* CustomPinAnnotation.xib in Resources */,
+				040183DC22CC49760090AA2E /* CustomCallOutView.xib in Resources */,
+				0401839422CB2D140090AA2E /* LaunchScreen.storyboard in Resources */,
+				040183B322CB746C0090AA2E /* StationListVC.xib in Resources */,
+				CED1A6C024DCFA9000451E73 /* Main.storyboard in Resources */,
+				040183BB22CB75700090AA2E /* FavoriteVC.xib in Resources */,
+				040183B722CB75570090AA2E /* StationMapVC.xib in Resources */,
+				040183BF22CB77B30090AA2E /* StationCell.xib in Resources */,
+				0401839122CB2D140090AA2E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9E6962FCBE325150AD0E330E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youbike/Pods-Youbike-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Youbike/Pods-Youbike-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Youbike/Pods-Youbike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF8CA12293C32D1A3737E6B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Youbike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0401838222CB2D120090AA2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040183CE22CC093F0090AA2E /* CustomPinAnnotation.swift in Sources */,
+				040183D222CC1BE30090AA2E /* Date+Extension.swift in Sources */,
+				040183AD22CB65CD0090AA2E /* TabBarItem.swift in Sources */,
+				CE18A7BD24DBFC9900A476B4 /* UIColor+Extension.swift in Sources */,
+				040183A622CB497B0090AA2E /* StationService.swift in Sources */,
+				040183AB22CB659C0090AA2E /* TabBarItemType.swift in Sources */,
+				2CC976C02865598300390808 /* StationListVM.swift in Sources */,
+				0401839F22CB3CBE0090AA2E /* Station.swift in Sources */,
+				040183BA22CB75700090AA2E /* FavoriteVC.swift in Sources */,
+				0425DC2F22CCCF1D005E04AD /* StationViewModel.swift in Sources */,
+				040183BE22CB77B30090AA2E /* StationCell.swift in Sources */,
+				040183AF22CB671D0090AA2E /* TabBarController.swift in Sources */,
+				040183B222CB746C0090AA2E /* StationListVC.swift in Sources */,
+				0401838A22CB2D120090AA2E /* AppDelegate.swift in Sources */,
+				040183DE22CC4E420090AA2E /* UIView+Extension.swift in Sources */,
+				040183B622CB75570090AA2E /* StationMapVC.swift in Sources */,
+				040183D422CC1C2B0090AA2E /* String+Extension.swift in Sources */,
+				0425DC2B22CCAA6A005E04AD /* Constants.swift in Sources */,
+				040183E122CC5C6E0090AA2E /* DistrictData.swift in Sources */,
+				040183DA22CC49610090AA2E /* CustomCallOutView.swift in Sources */,
+				0425DC2D22CCAD2F005E04AD /* UIViewController+Extension.swift in Sources */,
+				040183D622CC3ABF0090AA2E /* MyCustomPointAnnotation.swift in Sources */,
+				040183C222CB9F670090AA2E /* UITableView+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0401839222CB2D140090AA2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0401839322CB2D140090AA2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0401839622CB2D140090AA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0401839722CB2D140090AA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0401839922CB2D140090AA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0483C437D8A2EC8EF973F881 /* Pods-Youbike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Youbike/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.li.Youbike;
+				PRODUCT_NAME = "Youbike找尋";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0401839A22CB2D140090AA2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F683E0F1B30A662B4DC220 /* Pods-Youbike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Youbike/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.li.Youbike;
+				PRODUCT_NAME = "Youbike找尋";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0401838122CB2D120090AA2E /* Build configuration list for PBXProject "Youbike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0401839622CB2D140090AA2E /* Debug */,
+				0401839722CB2D140090AA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0401839822CB2D140090AA2E /* Build configuration list for PBXNativeTarget "Youbike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0401839922CB2D140090AA2E /* Debug */,
+				0401839A22CB2D140090AA2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0401837E22CB2D120090AA2E /* Project object */;
+}
