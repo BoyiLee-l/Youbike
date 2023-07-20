@@ -6,15 +6,10 @@ target 'Youbike' do
   use_frameworks!
 
   # Pods for Youbike
-  pod 'RealmSwift', '~> 3.20.0'
-  pod 'SwiftyJSON', '~> 4.0'
-  pod 'SVProgressHUD'
-  pod 'SCLAlertView'
-  pod 'MarqueeLabel'
-  pod 'NVActivityIndicatorView'
-  pod 'CVCalendar'
+  pod 'RealmSwift'
+
   pod 'Kingfisher'
-  pod 'SnapKit', '~> 5.0.0'
+
   pod 'Alamofire'
   pod 'RxSwift'
   pod 'RxCocoa'
