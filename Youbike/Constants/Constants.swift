@@ -9,3 +9,4 @@
 import Foundation
 
 let baseURL = "https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.gz"
+let youBikeURL = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"

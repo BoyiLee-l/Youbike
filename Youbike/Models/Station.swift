@@ -8,41 +8,42 @@
 
 import RealmSwift
 
-class StationInfo: Codable {
-    let retVal: [String: Station]
-}
+//class StationInfo: Codable {
+//    let retVal: [String: Station]
+//}
 
 class Station: Object, Codable {
     
-    @objc dynamic var name = ""                      // 站點名稱
-    @objc dynamic var region = ""                    // 站點所在區域
-    @objc dynamic var area = ""                      // 站點位置
-    @objc dynamic var latitude = ""                  // 站點緯度
-    @objc dynamic var longitude = ""                 // 站點經度
-    @objc dynamic var totalParkingQuantity = ""      // 總停車格
-    @objc dynamic var availableParkingCount = ""     // 站點空位數量
-    @objc dynamic var availableBikeCount = ""        // 站點目前車輛數量
-    @objc dynamic var updateTime = ""                // 站點資料更新時間
-    
+    @objc dynamic var area : String = "" // 站點位置
+    @objc dynamic var availableParkingCount : Int = 0 // 總停車格
+    @objc dynamic var latitude : Double = 0.0 // 站點緯度
+    @objc dynamic var longitude : Double = 0.0 // 站點經度
+    @objc dynamic var mday : String = "" // 站點資料更新時間
+    @objc dynamic var region : String = "" // 站點所在區域
+    @objc dynamic var availableBikeCount : Int = 0 // 站點目前車輛數量
+    @objc dynamic var name : String = "" // 站點名稱
+    @objc dynamic var totalParkingQuantity : Int = 0 // 總停車格
+    @objc dynamic var updateTime : String = ""
+
     @objc dynamic var isLike: Bool = false
     
-    private enum CodingKeys: String, CodingKey {
-        case name = "sna"
-        case region = "sarea"
+    enum CodingKeys: String, CodingKey {
         case area = "ar"
+        case availableParkingCount = "bemp"
         case latitude = "lat"
         case longitude = "lng"
-        case totalParkingQuantity = "tot"
-        case availableParkingCount = "bemp"
+        case mday = "mday"
+        case region = "sarea"
         case availableBikeCount = "sbi"
-        case updateTime = "mday"
+        case name = "sna"
+        case totalParkingQuantity = "tot"
+        case updateTime = "updateTime"
     }
 }
 
 extension Station {
     convenience init(station: Station) {
         self.init()
-        
         self.name = station.name
         self.region = station.region
         self.area = station.area

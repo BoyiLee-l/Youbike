@@ -11,7 +11,7 @@ import MapKit
 import RealmSwift
 
 class StationListVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     private var stationListViewModel = StationListViewModel()
@@ -26,7 +26,7 @@ class StationListVC: UIViewController {
     }()
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         setup()
         setupTableView()
         setupActivityView()
@@ -34,26 +34,27 @@ class StationListVC: UIViewController {
     }
     
     private func requestStationData() {
-        guard let url = URL(string: baseURL) else { return }
+        guard let url = URL(string: youBikeURL) else { return }
         
-        let resource = Resource<StationInfo>(url: url)
-        
+        let resource = Resource<[Station]>(url: url)
         startLoading()
-        
-        stationService.load(resource: resource) { [weak self] (stationInfo) in
-            guard let stationInfo = stationInfo else {
-                self?.popupAlert(title: "提示", message: "資料庫異常, 請稍後再試", actionTitles: ["確定"], actionStyle: [.default], action: [nil])
-                return
-            }
-            print("stationInfo:\(stationInfo.retVal.count)")
-            self?.saveToLocal(with: stationInfo)
-           
-            
-            self?.stationListViewModel.allStations = Array(stationInfo.retVal.values)
-            
-            DispatchQueue.main.async {
-                self?.stopLoading()
-                self?.tableView.reloadData()
+        stationService.load(resource: resource) { [weak self] (result) in
+            switch result {
+            case.success(let stationInfo):
+                print("stationInfo:\(stationInfo)")
+                self?.saveToLocal(with: stationInfo)
+                self?.stationListViewModel.allStations = Array(stationInfo)
+                
+                DispatchQueue.main.async {
+                    self?.stopLoading()
+                    self?.tableView.reloadData()
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+                DispatchQueue.main.async {
+                    self?.popupAlert(title: "提示", message: "資料庫異常, 請稍後再試", actionTitles: ["確定"], actionStyle: [.default], action: [nil])
+                    self?.stopLoading()
+                }
             }
         }
     }
@@ -108,10 +109,9 @@ class StationListVC: UIViewController {
         mapItem.openInMaps(launchOptions: nil)
     }
     
-    private func saveToLocal(with stationInfo: StationInfo) {
+    private func saveToLocal(with station: [Station]) {
         let allStations = List<Station>()
-        
-        for station in stationInfo.retVal.values {
+        for station in station {
             allStations.append(Station(station: station))
         }
         let allStation = AllStation(stations: allStations)

@@ -13,16 +13,21 @@ struct Resource<T: Decodable> {
 }
 
 class StationService {
-    func load<T>(resource: Resource<T>, completion: @escaping (T?) -> Void) {
+    func load<T>(resource: Resource<T>, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
-            guard let data = data else { return }
-            
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data else {
+                return
+            }
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)
-                completion(result)
+                completion(.success(result))
             } catch {
-                print(error)
-                completion(nil)
+                print("error",error)
+                completion(.failure(error))
             }
         }.resume()
     }

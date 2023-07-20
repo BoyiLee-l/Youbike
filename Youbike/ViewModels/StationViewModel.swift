@@ -67,19 +67,19 @@ extension StationViewModel {
     }
     
     var totalParkingCount: String {
-        return station.totalParkingQuantity
+        return "\(station.totalParkingQuantity)"
     }
     
     var availableParkingCount: String {
-        return station.availableParkingCount
+        return "\(station.availableParkingCount)"
     }
     
     var availableBikeCount: String {
-        return station.availableBikeCount
+        return "\(station.availableBikeCount)"
     }
     
     var updateTimeDescription: String {
-        return "資料更新時間: \(station.updateTime.convertDetailToDate.convertDateString)"
+        return "資料更新時間: \(station.mday)"
     }
 }
 

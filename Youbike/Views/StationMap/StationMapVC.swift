@@ -31,9 +31,7 @@ class StationMapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setup()
-
         setupMap()
         startUpdateLocation()
         requestStationData()
@@ -65,12 +63,13 @@ class StationMapVC: UIViewController {
     
     private func startUpdateLocation() {
         locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = 100.0
-            locationManager.startUpdatingLocation()
+        DispatchQueue.main.async {
+            if CLLocationManager.locationServicesEnabled() {
+                self.locationManager.delegate = self
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                self.locationManager.distanceFilter = 100.0
+                self.locationManager.startUpdatingLocation()
+            }
         }
     }
     
@@ -95,20 +94,23 @@ class StationMapVC: UIViewController {
     }
     
     private func requestStationData() {
-        guard let url = URL(string: baseURL) else { return }
+        guard let url = URL(string: youBikeURL) else { return }
         
-        let resource = Resource<StationInfo>(url: url)
-        
-        stationService.load(resource: resource) { [weak self] (stationInfo) in
-            guard let stationInfo = stationInfo else {
-                self?.popupAlert(title: "提示", message: "資料庫異常, 請稍後再試", actionTitles: ["確定"], actionStyle: [.default], action: [nil])
-                return
-            }
-            
-            self?.stationListViewModel.allStations = Array(stationInfo.retVal.values)
-            
-            DispatchQueue.main.async {
-                self?.addAnnotations()
+        let resource = Resource<[Station]>(url: url)
+        stationService.load(resource: resource) { [weak self] (result) in
+            switch result {
+            case.success(let stationInfo):
+                print("stationInfo:\(stationInfo)")
+                self?.stationListViewModel.allStations = Array(stationInfo)
+                
+                DispatchQueue.main.async {
+                    self?.addAnnotations()
+                }
+            case .failure(let error):
+                print("Error: \(error)")
+                DispatchQueue.main.async {
+                    self?.popupAlert(title: "提示", message: "資料庫異常, 請稍後再試", actionTitles: ["確定"], actionStyle: [.default], action: [nil])
+                }
             }
         }
     }
