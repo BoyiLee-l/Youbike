@@ -1,22 +1,22 @@
 PODS:
-  - Alamofire (5.7.1)
+  - Alamofire (5.8.0)
   - Differentiator (5.0.0)
-  - Kingfisher (7.8.1)
-  - Realm (10.41.1):
-    - Realm/Headers (= 10.41.1)
-  - Realm/Headers (10.41.1)
-  - RealmSwift (10.41.1):
-    - Realm (= 10.41.1)
-  - RxCocoa (6.5.0):
-    - RxRelay (= 6.5.0)
-    - RxSwift (= 6.5.0)
+  - Kingfisher (7.9.1)
+  - Realm (10.43.1):
+    - Realm/Headers (= 10.43.1)
+  - Realm/Headers (10.43.1)
+  - RealmSwift (10.43.1):
+    - Realm (= 10.43.1)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
   - RxDataSources (5.0.0):
     - Differentiator (~> 5.0)
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
-  - RxRelay (6.5.0):
-    - RxSwift (= 6.5.0)
-  - RxSwift (6.5.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -39,16 +39,16 @@ SPEC REPOS:
     - RxSwift
 
 SPEC CHECKSUMS:
-  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
-  Kingfisher: 63f677311d36a3473f6b978584f8a3845d023dc5
-  Realm: 0cb0b0b24f9303543a1f0dc17de8dec2d5bbf3f0
-  RealmSwift: 00627521cd456626f4cb2f7a7b18e1b07f2812a9
-  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  Kingfisher: 1d14e9f59cbe19389f591c929000332bf70efd32
+  Realm: d97b438de77459e443bd2c8ad5ca0f95107aee4b
+  RealmSwift: 6be3f27a7fd3f5cc8f99f4b187cc4e7150299e32
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
-  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
-  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
 
 PODFILE CHECKSUM: e9c2e3d5f9604562b84531e8ead755e057c919c6
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

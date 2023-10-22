@@ -272,11 +272,6 @@ public:
     class Internal {
         friend class _impl::RealmCoordinator;
 
-        static void set_sync_transact_callback(SyncSession& session, std::function<TransactionCallback>&& callback)
-        {
-            session.set_sync_transact_callback(std::move(callback));
-        }
-
         static void nonsync_transact_notify(SyncSession& session, VersionID::version_type version)
         {
             session.nonsync_transact_notify(version);
@@ -383,7 +378,7 @@ private:
                                        sync::ProtocolErrorInfo::Action server_requests_action)
         REQUIRES(!m_state_mutex, !m_config_mutex, !m_connection_state_mutex);
     void handle_error(sync::SessionErrorInfo) REQUIRES(!m_state_mutex, !m_config_mutex, !m_connection_state_mutex);
-    void handle_bad_auth(const std::shared_ptr<SyncUser>& user, Status error_code, std::string_view context_message)
+    void handle_bad_auth(const std::shared_ptr<SyncUser>& user, Status status)
         REQUIRES(!m_state_mutex, !m_config_mutex);
     // If sub_notify_error is set (including Status::OK()), then the pending subscription waiters will
     // also be called with the sub_notify_error status value.
@@ -394,7 +389,6 @@ private:
     void handle_progress_update(uint64_t, uint64_t, uint64_t, uint64_t, uint64_t, uint64_t);
     void handle_new_flx_sync_query(int64_t version);
 
-    void set_sync_transact_callback(std::function<TransactionCallback>&&) REQUIRES(!m_state_mutex);
     void nonsync_transact_notify(VersionID::version_type) REQUIRES(!m_state_mutex);
 
     void create_sync_session() REQUIRES(m_state_mutex, !m_config_mutex);
